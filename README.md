@@ -2,7 +2,9 @@
 
 Public companion to the working paper
 
-> **Mao, Y.** *Option-Implied Betas under a Common Lens: Buss-Vilkov versus Kempf-Korn-Sassning, with an Emphasis on the Term Structure.*  Working paper.
+> **Mao, Y. and Gao, C.** *Option-Implied Betas under a Common Lens: Buss-Vilkov versus Kempf-Korn-Sassning, with an Emphasis on the Term Structure.*  Working paper.
+>
+> *Authors:* Yingdong Mao (University of Sydney) and Chao Gao (Australian National University).
 
 ## What the paper does
 
