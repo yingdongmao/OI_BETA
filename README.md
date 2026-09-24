@@ -1,24 +1,33 @@
-# Option-Implied Betas under a Common Lens
+# The Term Structure of Beta
 
 Public companion to the working paper
 
-> **Mao, Y. and Gao, C.** *Option-Implied Betas under a Common Lens: Buss-Vilkov versus Kempf-Korn-Sassning, with an Emphasis on the Term Structure.*  Working paper.
+> **Gao, C. and Mao, Y.** *The Term Structure of Beta.*  Working paper.
 >
-> *Authors:* Yingdong Mao (University of Sydney) and Chao Gao (Australian National University).
+> *Authors:* Chao Gao (Australian National University) and Yingdong Mao (University of Sydney).
+
+*(Previously circulated as "Option-Implied Betas under a Common Lens: Buss–Vilkov versus Kempf–Korn–Saßning, with an Emphasis on the Term Structure".)*
 
 ## What the paper does
 
-We place the option-implied beta estimators of **Buss & Vilkov (2012)** (BV) and **Kempf, Korn & Sassning (2015)** (KKS) inside a single beta-decomposition framework,
+We estimate the **term structure of option-implied beta** for S&P 500 stocks using four estimators that rest on deliberately different identifying restrictions:
 
-$$\beta_i(\tau) = \rho_{iM}(\tau)\,\frac{\sigma_i(\tau)}{\sigma_M(\tau)}.$$
+1. **Kempf–Korn–Saßning (KKS)** — a market-wide implied correlation.
+2. **Buss–Vilkov (BV)** — a stock-specific implied correlation from a one-parameter affine transform of historical pairwise correlations.
+3. A **premium-ratio beta** that removes announcement and idiosyncratic variance from implied variance.
+4. A **regression-based beta** identified from the co-movement of stock and index implied variances.
 
-Within this language the two methods differ in *exactly one object*: the stock-specific implied correlation with the market. BV supplies it via a one-parameter affine transform of historical pairwise correlations; KKS replaces it with a market-wide constant.
+All four sit inside the same decomposition,
 
-We make three points:
+$$\beta_i(\tau) = \rho_{iM}(\tau)\,\frac{\sigma_i(\tau)}{\sigma_M(\tau)},$$
 
-1. **Nesting.** KKS is the constant-correlation special case of BV in the large-diversification limit. The whole gap between the two reduces to the cross-sectional heterogeneity of implied market correlations.
-2. **Term structure.** Applied to $\Delta\beta_i = \beta_i(\tau_L) - \beta_i(\tau_S)$, BV carries a name-specific correlation term structure whereas KKS carries only a market-wide one. BV is therefore more accurate when the signal lives in correlations, but KKS degrades much more gracefully when long-horizon pairwise-correlation data are unreliable.
-3. **Attribution.** Decomposing implied volatility additively, $\sigma^{IV} = \sigma^{ERV} + \sigma^{VRP}$, the KKS beta admits a clean additive split into ERV and VRP components sharing the same denominator; BV does not, because both its index volatility and its risk-neutral correlation carry their own variance- and correlation-risk premia. KKS therefore offers a cleaner per-stock attribution of the beta slope.
+so they differ only in how the risk-neutral correlation with the market is pinned down.
+
+## Main findings
+
+1. **The slope is priced.** For all four estimators the slope of the term structure — the 91-day minus the 30-day beta — predicts *lower* returns over the next month. A one-standard-deviation higher slope lowers the next month's return by **19 to 30 basis points**.
+2. **It is not a repackaged anomaly.** For the two new estimators the slope premium survives the stock's own implied-volatility slope and its earnings-announcement component, and it is not explained by idiosyncratic volatility, by co-movement with common idiosyncratic variance, by horizon bias, or by mutual-fund demand.
+3. **Term-structure economics.** The implied *systematic*-variance term structure departs from the expectations hypothesis by more than total implied variance does, and the premium is larger in recessions — consistent with prices of market risk that decline with horizon.
 
 ## Code & data
 
